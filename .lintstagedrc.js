@@ -12,6 +12,13 @@ const buildPrettierCommand = (filenames) =>
 
 const typeCheck = () => `tsc --noEmit`;
 
+const test = () => `jest`;
+
 module.exports = {
-  "*.{js,jsx,ts,tsx}": [buildPrettierCommand, buildEslintCommand, typeCheck],
+  "*.{js,jsx,ts,tsx}": [
+    buildPrettierCommand,
+    buildEslintCommand,
+    typeCheck,
+    test,
+  ],
 };
