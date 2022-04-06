@@ -18,3 +18,6 @@ export const when = <T>(val: T) => ({
   on: <A>(pred: (v: T) => boolean, fn: () => A) =>
     pred(val) ? match<T, A>(fn()) : chain<T, A>(val),
 });
+
+export const head = <T extends any>(array: T[]): T => array[0];
+export const tail = <T extends any>(array: T[]): T[] => array.slice(1);

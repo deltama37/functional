@@ -1,7 +1,4 @@
-import { when } from "./chaind-when";
-
-const head = <T extends any>(array: T[]): T => array[0];
-const tail = <T extends any>(array: T[]): T[] => array.slice(1);
+import { head, tail, when } from "./chaind-when";
 
 export const maximum = (x: number[]): number =>
   when(x)
